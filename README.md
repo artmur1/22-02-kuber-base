@@ -29,7 +29,25 @@
 
 ### Решение 1. Создать Pod с именем hello-world
 
+Написал конфигурацию pod с именем hello-world:
 
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-01-01.png)
+
+Под запущен:
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-01-02.png)
+
+Описание пода:
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-01-03.png)
+
+    kubectl port-forward hello-world 31000:31080
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-01-04.png)
+
+Ответ: curl: (52) Empty reply from server - curl: (52) Пустой ответ от сервера. Наверное надо как-то по другому получить ответ от echoserver:2.2.
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-01-05.png)
 
 ------
 
@@ -42,7 +60,35 @@
 
 ### Решение 2. Создать Service и подключить его к Pod
 
+Написал конфигурацию pod с именем netology-web:
 
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-01.png)
+
+Написал конфигурацию Service с именем netology-svc:
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-02.png)
+
+pod с именем netology-web создан:
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-03.png)
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-04.png)
+
+Описание pod с именем netology-web:
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-05.png)
+
+Описание Service с именем netology-svc:
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-06.png)
+
+    kubectl port-forward hello-world 31000:80
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-07.png)
+
+Ответ: curl: (52) Empty reply from server - curl: (52) Пустой ответ от сервера. Всё-таки надо как-то по другому получить ответ от echoserver:2.2.
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-08.png)
 
 ------
 
