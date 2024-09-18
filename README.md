@@ -29,7 +29,7 @@
 
 ### Решение 1. Создать Pod с именем hello-world
 
-Написал конфигурацию pod с именем hello-world:
+Написал конфигурацию pod с именем hello-world - https://github.com/artmur1/22-02-kuber-base/blob/main/files/pod-hw.yaml:
 
 ![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-01-01.png)
 
@@ -60,11 +60,11 @@
 
 ### Решение 2. Создать Service и подключить его к Pod
 
-Написал конфигурацию pod с именем netology-web:
+Написал конфигурацию pod с именем netology-web - https://github.com/artmur1/22-02-kuber-base/blob/main/files/pod-netology-web.yaml:
 
 ![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-01.png)
 
-Написал конфигурацию Service с именем netology-svc:
+Написал конфигурацию Service с именем netology-svc - https://github.com/artmur1/22-02-kuber-base/blob/main/files/ser-netology-web.yaml:
 
 ![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-02.png)
 
