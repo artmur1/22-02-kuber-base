@@ -45,7 +45,7 @@
 
 ![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-01-04.png)
 
-Ответ: curl: (52) Empty reply from server - curl: (52) Пустой ответ от сервера. Наверное надо как-то по другому получить ответ от echoserver:2.2.
+    curl -sS http://127.0.0.1:31000 || echo "Ответ получен!"
 
 ![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-01-05.png)
 
@@ -72,23 +72,23 @@ pod с именем netology-web создан:
 
 ![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-03.png)
 
-![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-04.png)
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-06.png)
 
 Описание pod с именем netology-web:
 
-![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-05.png)
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-07.png)
 
 Описание Service с именем netology-svc:
 
 ![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-06.png)
 
-    kubectl port-forward hello-world 31000:80
+    kubectl port-forward svc/netology-svc 31000:80
 
-![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-07.png)
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-09.png)
 
-Ответ: curl: (52) Empty reply from server - curl: (52) Пустой ответ от сервера. Всё-таки надо как-то по другому получить ответ от echoserver:2.2.
+    curl -sS http://127.0.0.1:31000 || echo 1
 
-![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-08.png)
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/img/22-02-02-10.png)
 
 ------
 
