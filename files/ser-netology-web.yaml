@@ -9,4 +9,4 @@ spec:
     - name: netology
       protocol: TCP
       port: 80
-      targetPort: 30150
+      targetPort: 8080
