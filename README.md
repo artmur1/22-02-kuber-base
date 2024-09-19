@@ -92,6 +92,46 @@ pod с именем netology-web создан:
 
 ------
 
+## Доработка 
+
+### Доработка задания 1
+
+Поменял порт в pod с именем hello-world на 8080. Старый под удалил, новый запустил.
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/22-02-01-08.png)
+
+    kubectl port-forward hello-world 31000:8080
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/22-02-01-09.png)
+
+    curl 127.0.0.1:31000
+
+Видно, что ответ от сервера получен:
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/22-02-01-10.png)
+
+### Доработка задания 2
+
+Поменял порт в pod с именем netology-web на 8080. Старый под удалил, новый запустил.
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/22-02-02-11.png)
+
+Поменял порт в Service с именем netology-svc на 8080. Старый сервис удалил, новый запустил.
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/22-02-02-12.png)
+
+    kubectl port-forward svc/netology-svc 31000:80
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/22-02-02-13.png)
+
+    curl 127.0.0.1:31000
+
+Видно, что ответ от сервера получен:
+
+![](https://github.com/artmur1/22-02-kuber-base/blob/main/22-02-02-14.png)
+
+------
+
 ### Правила приёма работы
 
 1. Домашняя работа оформляется в своем Git-репозитории в файле README.md. Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
